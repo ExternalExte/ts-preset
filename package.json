@@ -1,0 +1,27 @@
+{
+  "name": "ts-preset",
+  "version": "1.0.0",
+  "description": "typescript preset",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec \"node --loader ts-node/esm\" src/index.ts",
+    "test": "npx jest"
+  },
+  "author": "ExternalExte",
+  "license": "ISC",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.5",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.21",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  }
+}
